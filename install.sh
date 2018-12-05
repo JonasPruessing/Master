@@ -1,5 +1,4 @@
 
-
 #---------------------- ROS Instal --------------------
 
 sudo apt install ros-melodic-openni-launch 
@@ -69,6 +68,11 @@ sudo apt install ros-melodic-openni2-launch
 
 #---------------------- Darknet install ----------------
 
+#Follow https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html
+
+cd catkin_workspace/src
+git clone --recursive git@github.com:leggedrobotics/darknet_ros.git
+cd ../
 
 
 
