@@ -1,0 +1,325 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,11pt,final,DIV13,BCOR20mm,openbib,twoside,openany,onecolumn,pagesize,numbers=noenddot,bibliography=totoc,listof=totoc,index=totoc,
+	headings=big,titlepage,toc=graduated,intoc,pdftex]{scrbook}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{pdfpages}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{nextpage}
+\usepackage{float}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{lscape}
+\usepackage{csquotes}
+
+\usepackage[absolute]{textpos}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{0mm}{0mm}
+
+\begingroup
+\expandafter\expandafter\expandafter\endgroup
+\expandafter\ifx\csname chapterformat\endcsname\relax\else
+    \renewcommand*{\chapterformat}{
+        \llap{
+            \chapappifchapterprefix{\ }\thechapter\autodot\enskip
+        }
+    }
+\fi
+
+\renewcommand*{\othersectionlevelsformat}[1]{
+    \llap{
+        \csname the#1\endcsname\autodot\enskip
+    }
+}
+\setlength{\unitlength}{1mm}
+\newlength{\grafikdim}
+
+\usepackage{listings}
+\usepackage{color}
+\renewcommand{\ttdefault}{pcr}
+\definecolor{darkblue}{rgb}{0,0,.6}
+\definecolor{darkred}{rgb}{.6,0,0}
+\definecolor{darkgreen}{rgb}{0,.6,0}
+\definecolor{red}{rgb}{.98,0,0}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+%\lstset{
+ % %language=bash,
+  %frame=none,
+  %xleftmargin=0.7cm,
+  %frame=tb
+%}
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize\ttfamily,            % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,
+  columns=fixed,                   % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,					   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Prolog,
+  literate=*{\#}{{\textcolor{blue}{\#}}}{1},
+  otherkeywords={X,Y,tweety, pingu, woody, r1405, r1406, r1411, r1405B, program, external, not, kitchen, livingRoom},               % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname,                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+  xleftmargin=2em,
+  framexleftmargin=1.5em
+  %linewidth=0.8\linewidth
+}
+
+\lstdefinestyle{keywordless}{
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize\ttfamily,            % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,
+  columns=fixed,                   % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,					   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Prolog,
+  otherkeywords={},               % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname,                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+  xleftmargin=2em,
+  framexleftmargin=1.5em
+}
+
+\colorlet{punct}{red!60!black}
+
+\lstdefinestyle{json}{
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize\ttfamily,            % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,
+  columns=fixed,                   % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,					   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Prolog,
+  otherkeywords={},               % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{black},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname,                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+  xleftmargin=2em,
+  framexleftmargin=1.5em,
+   literate=
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{blue}{\{}}}}{1}
+      {\}}{{{\color{blue}{\}}}}}{1}
+      {[}{{{\color{blue}{[}}}}{1}
+      {]}{{{\color{blue}{]}}}}{1}
+      {\}}{{{\color{blue}{\}}}}}{1}
+      {\{}{{{\color{blue}{\{}}}}{1}
+}
+
+\lstdefinestyle{black}{
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize\ttfamily,            % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,
+  columns=fixed,                   % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,					   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Prolog,
+  otherkeywords={},               % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{black},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname,                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+  xleftmargin=2em,
+  framexleftmargin=1.5em,
+}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\setlength{\parskip}{\medskipamount}
+%\setlength{\parindent}{0pt}
+\usepackage{soul}
+
+\makeindex
+\usepackage{nomencl}
+\providecommand{\printnomenclature}{\printglossary}
+\providecommand{\makenomenclature}{\makeglossary}
+\makenomenclature
+
+\AfterFile{t1lmss.fd}{
+  \DeclareFontShape{T1}{lmss}{b}{n}
+  {<->ssub*lmss/bx/n}{}
+}
+
+\usepackage{textcomp}
+\usepackage[charter]{mathdesign}
+\usepackage{footmisc}
+
+\DeclareSymbolFont{cmsy}{OMS}{cmsy}{m}{n}
+\DeclareSymbolFontAlphabet{\mathcal}{cmsy}
+
+\usepackage{setspace}
+\usepackage{hyperref}
+\onehalfspacing
+\pagestyle{headings}
+
+\newcommand*{\ORIGchapterheadendvskip}{}
+\let\ORIGchapterheadendvskip=\chapterheadendvskip
+\renewcommand*{\chapterheadendvskip}{
+    {
+        \setlength{\parskip}{0pt}
+        \noindent\rule{.3\textwidth}{3pt}\rule[2.5pt]{.7\linewidth}{.5pt}\par
+    }
+    \vskip1.2em
+}
+
+\makeatletter
+\providecommand{\toclevel@lstlisting}{0}
+\makeatother
+
+\addtokomafont{caption}{\small}
+\setkomafont{captionlabel}{\sffamily\bfseries}
+\setcapindent{1em}
+\renewcommand \theparagraph {(\arabic{paragraph})}
+\renewcommand*{\lstlistlistingname}{List of Listings}
+
+\usepackage{booktabs}
+\usepackage{pifont}
+
+\setlength{\nomlabelwidth}{.20\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+
+\hyphenation{name-space}
+
+\usepackage[citestyle=numeric-comp, backend=biber, maxbibnames=10,
+	natbib=true, block=ragged]{biblatex}
+\usepackage{array}
+\usepackage{bigstrut}
+
+\addbibresource{bibtex.bib}
+
+\graphicspath{{../images/}}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\usepackage[section]{placeins}
+
+\begin{document}
+\pagenumbering{gobble}
+\include{Titel}
+\cleardoublepage
+\include{Affidavit}
+\cleardoublepage
+\include{Abstract}
+%\cleardoublepage
+%\cleartooddpage[\thispagestyle{empty}]
+\addtocontents{toc}{\protect\enlargethispage{2\normalbaselineskip}}
+\tableofcontents
+%\cleardoublepage
+\thispagestyle{empty}
+\cleartooddpage[\thispagestyle{empty}]
+%\cleartoevenpage[\thispagestyle{empty}]
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\thispagestyle{empty}
+\include{Introduction}
+\cleartooddpage[\thispagestyle{empty}]
+%\cleartoevenpage[\thispagestyle{empty}]
+
+\include{DefinitionOfTask}
+\cleartooddpage[\thispagestyle{empty}]
+%\cleartoevenpage[\thispagestyle{empty}]
+
+\include{Foundations}
+\cleartooddpage[\thispagestyle{empty}]
+%\cleartoevenpage[\thispagestyle{empty}]
+
+\include{RelatedWork}
+\cleartooddpage[\thispagestyle{empty}]
+%\cleartoevenpage[\thispagestyle{empty}]
+
+\include{Implementation}
+\cleartooddpage[\thispagestyle{empty}]
+%\cleartoevenpage[\thispagestyle{empty}]
+
+\include{Evaluation}
+\cleartooddpage[\thispagestyle{empty}]
+%\cleartoevenpage[\thispagestyle{empty}]
+
+\include{Conclusion}
+\cleartooddpage[\thispagestyle{empty}]
+%\cleartoevenpage[\thispagestyle{empty}]
+
+\listoffigures
+
+\lstlistoflistings
+%\bibliography{bibtex}
+
+\printbibliography
+%\bibliographystyle{apalike}
+
+\end{document}
