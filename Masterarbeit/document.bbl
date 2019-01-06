@@ -1,0 +1,204 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{havasi2007conceptnet}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=17886ebb8b9a8fb21c809ebeda86995c}{%
+           family={Havasi},
+           familyi={H\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e807d0e069f3ed3156852ca47a689388}{%
+           family={Speer},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=42c70d5cd0d6023ccee5007d4321298f}{%
+           family={Alonso},
+           familyi={A\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{50069793d8d025867a12f9740be4b2c1}
+      \strng{fullhash}{50069793d8d025867a12f9740be4b2c1}
+      \strng{bibnamehash}{50069793d8d025867a12f9740be4b2c1}
+      \strng{authorbibnamehash}{50069793d8d025867a12f9740be4b2c1}
+      \strng{authornamehash}{50069793d8d025867a12f9740be4b2c1}
+      \strng{authorfullhash}{50069793d8d025867a12f9740be4b2c1}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ConceptNet 3: a flexible, multilingual semantic network for common sense knowledge}
+    \endentry
+    \entry{helbig2013semantische}{book}{}
+      \name{author}{1}{}{%
+        {{hash=af865d1231ab1064890eeccdf47ac381}{%
+           family={Helbig},
+           familyi={H\bibinitperiod},
+           given={Hermann},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{af865d1231ab1064890eeccdf47ac381}
+      \strng{fullhash}{af865d1231ab1064890eeccdf47ac381}
+      \strng{bibnamehash}{af865d1231ab1064890eeccdf47ac381}
+      \strng{authorbibnamehash}{af865d1231ab1064890eeccdf47ac381}
+      \strng{authornamehash}{af865d1231ab1064890eeccdf47ac381}
+      \strng{authorfullhash}{af865d1231ab1064890eeccdf47ac381}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Die semantische Struktur nat{ü}rlicher Sprache: Wissensrepr{ä}sentation mit MultiNet}
+      \field{year}{2013}
+    \endentry
+    \entry{liu2004conceptnet}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d5780dd92459a9f90b55eb3ae726a4f9}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c08ca73548ff4fb2841dbc2b8255f421}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Push},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ec3ebb686d207125ae3e84563e0c4231}
+      \strng{fullhash}{ec3ebb686d207125ae3e84563e0c4231}
+      \strng{bibnamehash}{ec3ebb686d207125ae3e84563e0c4231}
+      \strng{authorbibnamehash}{ec3ebb686d207125ae3e84563e0c4231}
+      \strng{authornamehash}{ec3ebb686d207125ae3e84563e0c4231}
+      \strng{authorfullhash}{ec3ebb686d207125ae3e84563e0c4231}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{BT technology journal}
+      \field{number}{4}
+      \field{title}{ConceptNet—a Practical Commonsense Reasoning Tool-Kit}
+      \field{volume}{22}
+      \field{year}{2004}
+      \field{pages}{211\bibrangedash 226}
+      \range{pages}{16}
+    \endentry
+    \entry{sowa1987semantic}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7ad06bcf4acfcf4829817b23296bc5d4}{%
+           family={Sowa},
+           familyi={S\bibinitperiod},
+           given={John\bibnamedelima F},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ad06bcf4acfcf4829817b23296bc5d4}
+      \strng{fullhash}{7ad06bcf4acfcf4829817b23296bc5d4}
+      \strng{bibnamehash}{7ad06bcf4acfcf4829817b23296bc5d4}
+      \strng{authorbibnamehash}{7ad06bcf4acfcf4829817b23296bc5d4}
+      \strng{authornamehash}{7ad06bcf4acfcf4829817b23296bc5d4}
+      \strng{authorfullhash}{7ad06bcf4acfcf4829817b23296bc5d4}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ed. Stuart C Shapiro}
+      \field{title}{Semantic networks. encyclopedia of artificial intelligence}
+      \field{year}{1987}
+    \endentry
+    \entry{speer2017conceptnet}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=e807d0e069f3ed3156852ca47a689388}{%
+           family={Speer},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2b3c1fd1a7f952fbf0ec71e46d60d749}{%
+           family={Chin},
+           familyi={C\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=17886ebb8b9a8fb21c809ebeda86995c}{%
+           family={Havasi},
+           familyi={H\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{fdd3d0c664c8a7fa55e9e489c2ece2de}
+      \strng{fullhash}{fdd3d0c664c8a7fa55e9e489c2ece2de}
+      \strng{bibnamehash}{fdd3d0c664c8a7fa55e9e489c2ece2de}
+      \strng{authorbibnamehash}{fdd3d0c664c8a7fa55e9e489c2ece2de}
+      \strng{authornamehash}{fdd3d0c664c8a7fa55e9e489c2ece2de}
+      \strng{authorfullhash}{fdd3d0c664c8a7fa55e9e489c2ece2de}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AAAI}
+      \field{title}{ConceptNet 5.5: An Open Multilingual Graph of General Knowledge.}
+      \field{year}{2017}
+      \field{pages}{4444\bibrangedash 4451}
+      \range{pages}{8}
+    \endentry
+    \entry{speer2013conceptnet}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=e807d0e069f3ed3156852ca47a689388}{%
+           family={Speer},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=17886ebb8b9a8fb21c809ebeda86995c}{%
+           family={Havasi},
+           familyi={H\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2ee511b8dacc7a958f9570e1e99c8b05}
+      \strng{fullhash}{2ee511b8dacc7a958f9570e1e99c8b05}
+      \strng{bibnamehash}{2ee511b8dacc7a958f9570e1e99c8b05}
+      \strng{authorbibnamehash}{2ee511b8dacc7a958f9570e1e99c8b05}
+      \strng{authornamehash}{2ee511b8dacc7a958f9570e1e99c8b05}
+      \strng{authorfullhash}{2ee511b8dacc7a958f9570e1e99c8b05}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The People’s Web Meets NLP}
+      \field{title}{ConceptNet 5: A Large Semantic Network for Relational Knowledge}
+      \field{year}{2013}
+      \field{pages}{161\bibrangedash 176}
+      \range{pages}{16}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
