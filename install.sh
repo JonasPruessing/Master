@@ -77,3 +77,9 @@ cd ../
 
 
 
+
+for compile.
+catkin_make -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=gcc-6 -DCMAKE_CXX_COMPILER=g++-6
+
+
+
