@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/home/jonas/Jonas_workspace/RestAPI/WEBAPI/.metadata/.plugins/org.eclipse.jdt.core

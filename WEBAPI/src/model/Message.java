@@ -9,16 +9,20 @@ public class Message {
 
 	private long id;
     private String message;
-    private Date created;
+    private String objects;
+    private String room;
     private String author;
+	private Date created;
     
     public Message() {
     	
     }
     
-    public Message(long id, String message, String author) {
+    public Message(long id, String message,String room,String objects, String author) {
     	this.id = id;
     	this.message = message;
+    	this.room = room;
+    	this.objects = objects;
     	this.author = author;
     	this.created = new Date();
     }
@@ -35,6 +39,21 @@ public class Message {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+	
+	public String getRoom() {
+		return room;
+	}
+	public void setRoom(String room) {
+		this.room = room;
+	}
+	
+	public String getObjects() {
+		return objects;
+	}
+	public void setObjects(String objects) {
+		this.objects = objects;
+	}
+	
 	public Date getCreated() {
 		return created;
 	}
