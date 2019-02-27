@@ -4,7 +4,7 @@
 \section{ROS – Robot Operating System}
 \label{sec:ros}
 
-Das Robot Operating System (ROS) ist ein Open Source Programmiergerüst (Framework)  zur Programmierung von Software für Roboter. ROS bietet zahlreiche Bibliotheken und Tools zum organisieren von komplexen und unterschiedlichen Aufgaben, um ein robustes Zugsamenspiel zwischen den verschiedenen Hardwarekomponenten einer oder mehrerer Roboterplattformen zu gewährleisten.  Im wesentlichen besteht ROS aus Treiber, die Daten von Sensoren wie Kameras, Laserscannern und GPS-Modulen auslesen, Algorithmen zum erstellen von Karten, Pfadplanung oder allgemeiner Navigation, der Infrastruktur, welche die Komponenten des Robotersystems miteinander verbindet und die Datenpakete zwischen den Prozessen verwaltet und Werkzeuge, zur Visualisierung des Roboters, der Aufnahme von Sensordaten und zur Fehleranalyse. 
+Das Robot Operating System (ROS) ist ein Open Source Programmiergerüst (Framework)  zur Programmierung von Software für Roboter. ROS bietet zahlreiche Bibliotheken und Tools zum organisieren von komplexen und unterschiedlichen Aufgaben, um ein robustes Zugsamenspiel zwischen den verschiedenen Hardwarekomponenten einer oder mehrerer Roboterplattformen zu gewährleisten.  Im wesentlichen besteht ROS aus Treiber, die Daten von Sensoren wie Kameras, Laserscannern und GPS-Modulen auslesen, Algorithmen zum erstellen von Karten, Pfadplanung oder allgemeiner Navigation, der Infrastruktur, welche die Komponenten des Robotersystems miteinander verbindet und die Datenpakete zwischen den Prozessen verwaltet, ebenso wie Werkzeugen, zur Visualisierung des Roboters, der Aufnahme von Sensordaten und zur Fehleranalyse. 
 Ein ROS-System besteht aus einzelnen Programmen, die in ROS nodes (Knoten) genannt werden. Die Programme kommunizieren untereinander über sogenannte edges (Kanten), welche die Datenströme darstellen. Ein Konten kann Datenströme senden, dann published er eine Topic, sodass ein anderer Knoten auf diese Topic subscriben, also diese Nachricht empfangen kann. Die Knoten und Kanten werden über einen Master überwacht, den roscore. 
 Anleitungen für die Installation und Herangehensweise sind unter wiki.ros.org zu finden. Fragen werden durch die große Online-Community von Nutzern und Entwicklern beantwortet. 
 Auf Internetseiten wie github.com werden auf Grundlage der ROS-Bibliothek vorprogrammierte oder fertige Programme geteilt, wodurch Programmieraufwand für neue Projekte reduziert werden kann, da oft auf diese bereits bestehende Programme aufgebaut, oder diese komplett übernommen werden. Daraus lässt sich der größte Vorteil von ROS ableiten, das Zeitersparnis.
@@ -68,6 +68,33 @@ Die große Menge an Begriffen und der Wissensgehalt durch die Beziehungen von Co
 \begin{align}
 E &= mc^2
 \end{align}
+
+
+
+
+
+
+\section{RESTful Web Services}
+\label{sec:cn}
+
+
+
+\section{Objekterkennung mit Convolutional Neural Network - YOLOv3}
+\label{sec:cn}
+
+Unter Objekterkennung ist das identifizieren von Objekten auf einem digitalen Bild oder in einem Video zu verstehen. Dabei wird das erkannte Objekt einer Klasse und einer Lage zugeordnet. 
+
+Abbildung xx stellt eine automatische Objekterkennung durch ein künstliches Neuronales Netz dar. Zu erkennen ist, dass mehrere Objekte klassifiziert und durch eine Box, auch bounding Box genannt, die Position und Größe des Objektes identifiziert wurde. 
+
+Eine der aktuell verbreitetsten Verfahren ist die Erkennung von Objekten durch Convolutional Neural Networks (CNN), einem Ansatz aus dem Deep Learning, zu deutsch Tiefes Lernen. CNNs bestehen im wesentlichen aus den Convolutional Layers, Schichten die meist durch zwei oder dreidimentionale Matrizen dargestellt werden. Diese Matrizen werden mit den vorher erlernten Filterkenels als Skalarprodukt berechnet. Im Gegensatz zu Rekurrent Neural Networks (RNN) sind CNNs nur vorwärts gerichtet. YOLOv3 ist ein state-of-the-art CNN, welches Objekte in Echtzeit erkennen kann. 
+
+
+
+
+Abbildung xx zeigt die Einordnung von YOLOv3 im Anwendungsgebiet der Künstlichen Intelligenz. 
+
+
+
 
 
 
