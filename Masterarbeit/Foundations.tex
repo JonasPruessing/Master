@@ -36,8 +36,8 @@ Oft werden Netzwerke als Graphen dargestellt.
 	
 \end{figure}
 
-In Abbildung … ist ein semantisches Netzwerk dargestellt. Zu sehen ist, wie die Begriffe, zum Beispiel Wohnzimmer und Raum, zueinander in Beziehung stehen. Ein Wohnzimmer ist ein (IsA) Raum. IsA ist eine der 36 in Conceptnet Version 5.5 definierten Kernbeziehungen, die eine Deutung der Beziehung ermöglichen. Conceptnet Version 3 hat 26 Kernbeziehungen\cite{havasi2007conceptnet}. Weitere Beziehungen sind RelatedTo, welche einen Zusammenhang zweier Begriffe beschreibt, diese aber nicht genauer benennen kann und AtLocation, diese lässt auf einen Standort schließen. Ein Raum ist ein Ort, an dem sich Möbel befinden. 
-In Conceptnet werden die Beziehungen in zwei Klassen eingeteilt, in symmetrische und asymmetrische Beziehungen. Zu den symmetrischen Beziehungen gehören beispielsweise RelatedTo, Synonym und Antonym. Hierbei handelt es sich um generellere Beziehungen, hingegen sind asymmetrische Beziehungen wie AtLocation, IsA, PartOf und UsedFor genauer definiert in Bezug auf ihre Deutungen. Eine weitere Eigenschaft des semantischen Netzwerkes ist das Kantengewicht, welches die Wichtigkeit der Beziehung abbildet. Ein Bett wird in Conceptnet mit einer Gewichtung von 10,9 in Beziehung zu Möbel gesetzt, eine Toilette mit einer Gewichtung von 0,17. Daraus lässt sich weiterer Kontext erschließen. 
+In Abbildung … ist ein semantisches Netzwerk dargestellt. Zu sehen ist, wie die Begriffe, zum Beispiel Wohnzimmer und Raum, zueinander in Beziehung stehen. Ein Wohnzimmer ist ein (IsA) Raum. IsA ist eine der 36 in Conceptnet Version 5.5 definierten Kernbeziehungen, die eine Deutung der Beziehung zwischen zwei Begriffen ermöglichen. Conceptnet Version 3 hat 26 Kernbeziehungen\cite{havasi2007conceptnet}. Weitere Beziehungen sind RelatedTo, welche einen generellen Zusammenhang zweier Begriffe beschreibt, diese aber nicht genauer benennen kann und AtLocation, diese lässt auf einen Standort schließen. Ein Raum ist ein Ort, an dem sich Möbel befinden. 
+In Conceptnet werden die Beziehungen in zwei Klassen eingeteilt, in symmetrische und asymmetrische Beziehungen. Zu den symmetrischen Beziehungen gehören beispielsweise RelatedTo, Synonym und Antonym. Hierbei handelt es sich um generellere Beziehungen, hingegen sind asymmetrische Beziehungen wie AtLocation, IsA, PartOf und UsedFor genauer definiert in Bezug auf ihre Deutungen. Eine weitere Eigenschaft des semantischen Netzwerkes ist das Kantengewicht, welches die Gewichtung der Beziehung abbildet. Ein Bett wird in Conceptnet mit einer Gewichtung von 10,9 in Beziehung zu Möbel gesetzt, eine Toilette mit einer Gewichtung von 0,17. Daraus lässt sich weiterer Kontext erschließen. 
 
 \begin{figure}[h]
 	
@@ -84,14 +84,23 @@ E &= mc^2
 
 Unter Objekterkennung ist das identifizieren von Objekten auf einem digitalen Bild oder in einem Video zu verstehen. Dabei wird das erkannte Objekt einer Klasse und einer Lage zugeordnet. 
 
-Abbildung xx stellt eine automatische Objekterkennung durch ein künstliches Neuronales Netz dar. Zu erkennen ist, dass mehrere Objekte klassifiziert und durch eine Box, auch bounding Box genannt, die Position und Größe des Objektes identifiziert wurde. 
+Abbildung xx stellt eine automatische Objekterkennung durch ein künstliches Neuronales Netz dar. Zu erkennen ist, dass mehrere Objekte klassifiziert und durch eine Box, auch bounding Box genannt, die Position und Größe des Objektes auf dem Bild identifiziert wurde. 
 
-Eine der aktuell verbreitetsten Verfahren ist die Erkennung von Objekten durch Convolutional Neural Networks (CNN), einem Ansatz aus dem Deep Learning, zu deutsch Tiefes Lernen. CNNs bestehen im wesentlichen aus den Convolutional Layers, Schichten die meist durch zwei oder dreidimentionale Matrizen dargestellt werden. Diese Matrizen werden mit den vorher erlernten Filterkenels als Skalarprodukt berechnet. Im Gegensatz zu Rekurrent Neural Networks (RNN) sind CNNs nur vorwärts gerichtet. YOLOv3 ist ein state-of-the-art CNN, welches Objekte in Echtzeit erkennen kann. 
+Eine der aktuell verbreitetsten Verfahren ist die Erkennung von Objekten durch Convolutional Neural Networks (CNN), einem Ansatz aus dem Deep Learning, zu deutsch Tiefes Lernen. CNNs bestehen im wesentlichen aus den Convolutional Layers, Schichten die meist durch zwei oder dreidimensionale Matrizen dargestellt werden. Die Matrizen werden mit den vorher erlernten Filterkenels als Skalarprodukt berechnet. Im Gegensatz zu Rekurrent Neural Networks (RNN) sind CNNs nur vorwärts gerichtet. YOLOv3 ist ein state-of-the-art CNN, welches Objekte in Echtzeit erkennen kann.  
 
 
 
 
 Abbildung xx zeigt die Einordnung von YOLOv3 im Anwendungsgebiet der Künstlichen Intelligenz. 
+
+
+YOLO steht für you only look ones. Dahinter verbirgt sich der Ansatz die Objekterkennung als einzelne Regressionsaufgabe zu sehen. Andere Ansätze verfolgen komplexere Lösungswege bei denen zunächst eine Region definiert wird, in der sich die zu identifizierenden Objekte wahrscheinlich aufhalten. Diese komplexeren Ansäte nehmen jedoch mehr Zeit in Anspruch. Ein Beispiel hierfür ist das Region Based CNN, kurz R-CNN. 
+
+Während der Vorgänger von YOLOv3, YOLOv2 mit dem Motto "Yolo9000 Better,Faster,Stronger" zu seiner Zeit mit bis zu 91 FPS auf einer Geforce GTX Titan X Grafikkarte der schnellste und mit bis zu 78,6 mAP, bei einer Geschwindigkeit von 40 FPS, einer der genausten Algorithmen war, ist YOLOv3 bedingt durch seine tiefere Struktur etwas langsamer, jedoch dafür akkurater \cite{redmon2017yolo9000}. Die Architektur von YOLOv3 basiert auf einem aus 53 Convolutional Layer bestehendem CNN, das Darknet-53 genannt wird. 
+Darauf folgen 53 weitere Layer, die eine Objekterkennung von Objekten in drei unterschiedlichen Größen ermöglichen. Entsprechend hat sich YOLOv3 besonders beim erkennen von kleinen Objekten gegenüber seinen Vorgängern bewährt. In Summe besteht YOLOv3 aus 106 Convolutional Layer.
+
+
+Abbildung xx zeigt die Architektur von YOLOv3.
 
 
 
