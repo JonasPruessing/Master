@@ -1931,6 +1931,7 @@
     <bcf:citekey order="6">havasi2007conceptnet</bcf:citekey>
     <bcf:citekey order="7">speer2013conceptnet</bcf:citekey>
     <bcf:citekey order="8">speer2017conceptnet</bcf:citekey>
+    <bcf:citekey order="9">redmon2017yolo9000</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

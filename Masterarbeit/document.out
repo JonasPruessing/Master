@@ -3,13 +3,15 @@
 \BOOKMARK [0][-]{chapter.3}{Foundations}{}% 3
 \BOOKMARK [1][-]{section.3.1}{ROS \205 Robot Operating System}{chapter.3}% 4
 \BOOKMARK [1][-]{section.3.2}{ConceptNet}{chapter.3}% 5
-\BOOKMARK [0][-]{chapter.4}{Related Work}{}% 6
-\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 7
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 8
-\BOOKMARK [1][-]{section.6.1}{Evaluation Setup}{chapter.6}% 9
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 10
-\BOOKMARK [1][-]{section.7.1}{Summary}{chapter.7}% 11
-\BOOKMARK [1][-]{section.7.2}{Future Work}{chapter.7}% 12
-\BOOKMARK [0][-]{chapter*.4}{Abbildungsverzeichnis}{}% 13
-\BOOKMARK [0][-]{chapter*.5}{List of Listings}{}% 14
-\BOOKMARK [0][-]{chapter*.6}{Literatur}{}% 15
+\BOOKMARK [1][-]{section.3.3}{RESTful Web Services}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.4}{Objekterkennung mit Convolutional Neural Network - YOLOv3}{chapter.3}% 7
+\BOOKMARK [0][-]{chapter.4}{Related Work}{}% 8
+\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 9
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 10
+\BOOKMARK [1][-]{section.6.1}{Evaluation Setup}{chapter.6}% 11
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 12
+\BOOKMARK [1][-]{section.7.1}{Summary}{chapter.7}% 13
+\BOOKMARK [1][-]{section.7.2}{Future Work}{chapter.7}% 14
+\BOOKMARK [0][-]{chapter*.4}{Abbildungsverzeichnis}{}% 15
+\BOOKMARK [0][-]{chapter*.5}{List of Listings}{}% 16
+\BOOKMARK [0][-]{chapter*.6}{Literatur}{}% 17

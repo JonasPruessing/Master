@@ -18,7 +18,7 @@ Im Fachbereich Verteilte Systeme der Universität Kassel existieren bereits viel
 \section{ConceptNet}
 \label{sec:cn}
 
-Conceptnet ist ein multilinguales semantisches Netzwerk, welches menschliches Allgemeinwissen in eine für Computer verständliche Sprache übersetzen soll. Netzwerke sind Datensätze,welche aus Begriffen (Knoten) und derer Beziehungen (Kanten) bestehen\cite{sowa1987semantic}. Bei semantischen Netzwerken bestehen die Kanten aus Wörtern, die eine Bedeutung der Beziehung zwischen zwei Knoten zuordnen. Semantische Netzwerke dienen in der Computerlinguistik als objektorientierte Wissensrepräsentationsmethode (WRM) und sind dem Bereich der künstlichen Intelligenz zuzuordnen\cite{helbig2013semantische}. 
+Conceptnet ist ein multilinguales semantisches Netzwerk, welches menschliches Allgemeinwissen in eine für Computer verständliche Sprache übersetzen soll. Netzwerke sind Datensätze,welche aus Begriffen (Knoten) und derer Beziehungen (Kanten) bestehen~\cite{sowa1987semantic}. Bei semantischen Netzwerken bestehen die Kanten aus Wörtern, die eine Bedeutung der Beziehung zwischen zwei Knoten zuordnen. Semantische Netzwerke dienen in der Computerlinguistik als objektorientierte Wissensrepräsentationsmethode (WRM) und sind dem Bereich der künstlichen Intelligenz zuzuordnen~\cite{helbig2013semantische}. 
 Oft werden Netzwerke als Graphen dargestellt. 
 
 \begin{figure}[h]
@@ -56,7 +56,7 @@ In Conceptnet werden die Beziehungen in zwei Klassen eingeteilt, in symmetrische
 
 
 Abbildung ... zeigt das Wachstum von Conceptnet in Abhängigkeit der Anzahl der Beziehungen im zeitlichen Verlauf. Die Version 5.5 von Conceptnet weißt über 21 Millionen solcher Beziehungen auf und umfasst ach Millionen Begriffe. Da Conceptnet stetig weiterentwickelt wird, auf neue Ressourcen zugreift, vergrößert sich das Netzwerk und erzielt bessere Resultate. Bei der Version 5.6 wird die Anzahl der Beziehungen auf über 28 Millionen geschätzt, im Jahr 2004 waren es nur knapp zwei Millionen. 
-Das Wissen von Conceptnet basiert ursprünglich auf Crowdsourcing Datensätzen wie wiktionary, DBpedia und Open-Mind-Common-Sense, auf Spielen wie verbosity und ndaya.jp und Expertenwissen von Wordnet, OpenCyc und JMDict. Ein neuer Ansatz ist Wissen von Word Embeddings, wie word2vec und GloVe, mit in Conceptnet zu integrieren. In \cite{speer2017conceptnet} werden unter dem Synonym ConceptNet Numberbatch bereits erste Erfolge nachgewiesen.
+Das Wissen von Conceptnet basiert ursprünglich auf Crowdsourcing Datensätzen wie wiktionary, DBpedia und Open-Mind-Common-Sense, auf Spielen wie verbosity und ndaya.jp und Expertenwissen von Wordnet, OpenCyc und JMDict. Ein neuer Ansatz ist Wissen von Word Embeddings, wie word2vec und GloVe, mit in Conceptnet zu integrieren. In ~\cite{speer2017conceptnet} werden unter dem Synonym ConceptNet Numberbatch bereits erste Erfolge nachgewiesen.
 
 Zehn verschiedene Sprachen bilden den Kern von Conceptnet, in Summe sind über 300 Sprachen vertreten. Conceptnet hat sich in der Vergangenheit gegen andere semantische Netzwerke behauptet. Lediglich der Vergleich zu Cyc ist nicht genau zu validieren, da diese Plattform seit 2015 nicht mehr öffentlich zugänglich ist. Conceptnet hingegen ist ein Open Source Netzwerk und bietet die Möglichkeit über eine Web-API in eigene Anwendungen integriert zu werden. Wissenspakete im Json-Format können angefragt und für spezielle Aufgaben weiterverarbeitet werden. 
 Die große Menge an Begriffen und der Wissensgehalt durch die Beziehungen von Conceptnet sind eine gute Voraussetzung als Wissensbasis für Künstliche Intelligenz und bieten eine Grundlage für diese Arbeit. 
@@ -96,11 +96,25 @@ Abbildung xx zeigt die Einordnung von YOLOv3 im Anwendungsgebiet der Künstliche
 
 YOLO steht für you only look ones. Dahinter verbirgt sich der Ansatz die Objekterkennung als einzelne Regressionsaufgabe zu sehen. Andere Ansätze verfolgen komplexere Lösungswege bei denen zunächst eine Region definiert wird, in der sich die zu identifizierenden Objekte wahrscheinlich aufhalten. Diese komplexeren Ansäte nehmen jedoch mehr Zeit in Anspruch. Ein Beispiel hierfür ist das Region Based CNN, kurz R-CNN. 
 
-Während der Vorgänger von YOLOv3, YOLOv2 mit dem Motto "Yolo9000 Better,Faster,Stronger" zu seiner Zeit mit bis zu 91 FPS auf einer Geforce GTX Titan X Grafikkarte der schnellste und mit bis zu 78,6 mAP, bei einer Geschwindigkeit von 40 FPS, einer der genausten Algorithmen war, ist YOLOv3 bedingt durch seine tiefere Struktur etwas langsamer, jedoch dafür akkurater \cite{redmon2017yolo9000}. Die Architektur von YOLOv3 basiert auf einem aus 53 Convolutional Layer bestehendem CNN, das Darknet-53 genannt wird. 
+Während der Vorgänger von YOLOv3, YOLOv2 mit dem Motto "Yolo9000 Better,Faster,Stronger" zu seiner Zeit mit bis zu 91 FPS auf einer Geforce GTX Titan X Grafikkarte der schnellste und mit bis zu 78,6 mAP, bei einer Geschwindigkeit von 40 FPS, einer der genausten Algorithmen war, ist YOLOv3 bedingt durch seine tiefere Struktur etwas langsamer, jedoch dafür akkurater~\cite{redmon2017yolo9000}. Die Architektur von YOLOv3 basiert auf einem aus 53 Convolutional Layer bestehendem CNN, das Darknet-53 genannt wird. 
 Darauf folgen 53 weitere Layer, die eine Objekterkennung von Objekten in drei unterschiedlichen Größen ermöglichen. Entsprechend hat sich YOLOv3 besonders beim erkennen von kleinen Objekten gegenüber seinen Vorgängern bewährt. In Summe besteht YOLOv3 aus 106 Convolutional Layer.
 
+\begin{figure}[h]
+	
+	\begin{center}
+		
+		\includegraphics[width=16cm]{images/Yolov3 archtecture.png}
+		
+		\caption{Architektur von YOLOv3\footnote{\label{foot:1}Dies ist jetzt eine Fußnote.}}
+		
+		\label{yolo_arch}
+		
+	\end{center}
+	
+	
+\end{figure}
 
-Abbildung xx zeigt die Architektur von YOLOv3.
+Abbildung \ref{yolo_arch} zeigt die Architektur von YOLOv3.
 
 
 
