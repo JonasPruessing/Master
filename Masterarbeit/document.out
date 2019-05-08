@@ -1,17 +1,19 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Definition Of Task}{}% 2
-\BOOKMARK [0][-]{chapter.3}{Foundations}{}% 3
-\BOOKMARK [1][-]{section.3.1}{ROS \205 Robot Operating System}{chapter.3}% 4
-\BOOKMARK [1][-]{section.3.2}{ConceptNet}{chapter.3}% 5
-\BOOKMARK [1][-]{section.3.3}{RESTful Web Services}{chapter.3}% 6
-\BOOKMARK [1][-]{section.3.4}{Objekterkennung mit Convolutional Neural Network - YOLOv3}{chapter.3}% 7
-\BOOKMARK [0][-]{chapter.4}{Related Work}{}% 8
-\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 9
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 10
-\BOOKMARK [1][-]{section.6.1}{Evaluation Setup}{chapter.6}% 11
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 12
-\BOOKMARK [1][-]{section.7.1}{Summary}{chapter.7}% 13
-\BOOKMARK [1][-]{section.7.2}{Future Work}{chapter.7}% 14
-\BOOKMARK [0][-]{chapter*.4}{Abbildungsverzeichnis}{}% 15
-\BOOKMARK [0][-]{chapter*.5}{List of Listings}{}% 16
-\BOOKMARK [0][-]{chapter*.6}{Literatur}{}% 17
+\BOOKMARK [1][-]{section.2.1}{Aufgabenstellung}{chapter.2}% 3
+\BOOKMARK [0][-]{chapter.3}{Foundations}{}% 4
+\BOOKMARK [1][-]{section.3.1}{ROS \205 Robot Operating System}{chapter.3}% 5
+\BOOKMARK [1][-]{section.3.2}{ConceptNet}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.3}{RESTful Web Services}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.4}{Objekterkennung mit Convolutional Neural Network - YOLOv3}{chapter.3}% 8
+\BOOKMARK [0][-]{chapter.4}{Related Work}{}% 9
+\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 10
+\BOOKMARK [1][-]{section.5.1}{L\366sungsansatz}{chapter.5}% 11
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 12
+\BOOKMARK [1][-]{section.6.1}{Evaluation Setup}{chapter.6}% 13
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 14
+\BOOKMARK [1][-]{section.7.1}{Summary}{chapter.7}% 15
+\BOOKMARK [1][-]{section.7.2}{Future Work}{chapter.7}% 16
+\BOOKMARK [0][-]{chapter*.4}{Abbildungsverzeichnis}{}% 17
+\BOOKMARK [0][-]{chapter*.5}{List of Listings}{}% 18
+\BOOKMARK [0][-]{chapter*.6}{Literatur}{}% 19

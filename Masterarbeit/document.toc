@@ -7,6 +7,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Definition Of Task}{3}{chapter.2}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Aufgabenstellung}{3}{section.2.1}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Foundations}{5}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}ROS \IeC {\textendash } Robot Operating System}{5}{section.3.1}
@@ -21,18 +23,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Implementation}{13}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Evaluation}{15}{chapter.6}
+\contentsline {section}{\numberline {5.1}L\IeC {\"o}sungsansatz}{13}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Evaluation Setup}{15}{section.6.1}
+\contentsline {chapter}{\numberline {6}Evaluation}{17}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusion}{17}{chapter.7}
+\contentsline {section}{\numberline {6.1}Evaluation Setup}{17}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Summary}{17}{section.7.1}
+\contentsline {chapter}{\numberline {7}Conclusion}{19}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Future Work}{17}{section.7.2}
+\contentsline {section}{\numberline {7.1}Summary}{19}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{19}{chapter*.4}
+\contentsline {section}{\numberline {7.2}Future Work}{19}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline List of Listings}{20}{chapter*.5}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{21}{chapter*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{21}{chapter*.6}
+\contentsline {chapter}{\nonumberline List of Listings}{22}{chapter*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literatur}{23}{chapter*.6}
