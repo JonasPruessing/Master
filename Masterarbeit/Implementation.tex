@@ -1,7 +1,7 @@
 \chapter{Implementation}
 \label{sec:implementation}
 
-\section{Lösungsansatz}
+\section{Konzept}
 \label{sec:Lösung}
 
 Übergeordnet lässt sich die Aufgabe dieser Arbeit damit zusammenfassen, aus einem Bild Wissen zu ziehen, welches einen hohen Grad an Abstraktion beinhaltet. Da herkömmliche Neuronale Netzwerke alleine nicht für diese Aufgabe ausreichen, wird in dieser Arbeit der Ansatz untersucht, durch die Kombination aus Neuronalem Nerz und semantischem Netzwerk ein System zu schaffen und zu bewerten, welches aus einem Bild Informationen über z.B. die Räumlichkeit und Handlungsfelder, theoretisch aber über jegliches Thema, abstrahieren kann. 
@@ -23,7 +23,7 @@
 \end{figure}
 
 
-In Abbildung X.x ist das Konzept für dieses System, welches unter dem Namen YoNetCn zusammengefasst wird, dargestellt. Die primäre Eingangsgröße für YoNetCn ist ein Bild,in welchem durch ein Neuronales Netz Objekte erkannt werden. Die Objekte dienen zusammen mit der sekundären Eingangsgröße, einem Thema oder Themengebiet, einem Semantischen Netz als Eingangsgrößen. Ausgegeben werden vom semantischem Netz als Systemgröße die Zusammenhänge zwischen den Objekten und dem Thema. Ein Algorithmus bewertet und filtert diese Zusammenhänge und schließt daraus auf neues Wissen. Als Beispiel hierfür dient die Szenenerkennung. 
+In Abbildung \ref{system_Bild} ist das Konzept für dieses System, welches unter dem Namen YoNetCn zusammengefasst wird, dargestellt. Die primäre Eingangsgröße für YoNetCn ist ein Bild,in welchem durch ein Neuronales Netz Objekte erkannt werden. Die Objekte dienen zusammen mit der sekundären Eingangsgröße, einem Thema oder Themengebiet, einem Semantischen Netz als Eingangsgrößen. Ausgegeben werden vom semantischem Netz als Systemgröße die Zusammenhänge zwischen den Objekten und dem Thema. Ein Algorithmus bewertet und filtert diese Zusammenhänge und schließt daraus auf neues Wissen. Als Beispiel hierfür dient die Szenenerkennung. 
 
 
 
@@ -35,7 +35,7 @@ In Abbildung X.x ist das Konzept für dieses System, welches unter dem Namen YoN
 		
 		\caption{Szenenerkennung mit YoNetCn}
 		
-		\label{system_Bild}
+		\label{system_Bild2}
 		
 	\end{center}
 	
@@ -43,7 +43,7 @@ In Abbildung X.x ist das Konzept für dieses System, welches unter dem Namen YoN
 \end{figure}
 
 
-Abbildung X.x zeigt die Szenenerkennung mit YoNetCn am Beispiel eines Bildes von einem Bad. Wird zu diesem Bild das Thema Räumlichkeit als sekundäre Eingangsgröße eingegeben, so wird als Ausgabe Bad ausgegeben. Bei gleichem Bild, jedoch mit sekundärer Eingabe Tätigkeit, soll YoNetCn Adjektive wie duschen, auf Toilette gehen, oder Zähne putzen ausgeben. Theoretisch sind jegliche sekundären Eingangsgrößen möglich, jedoch wurde sich in dieser Arbeit auf die Themen Räumlichkeit und Tätigkeit beschränkt, da der zeitliche Rahmen dieser Arbeit ansonsten gesprengt werden würde und diese beiden Themengebiete als Nachweis für die grundsätzliche Durchführbarkeit der Aufgabenstellung ausreichen. 
+Abbildung \ref{system_Bild2} zeigt die Szenenerkennung mit YoNetCn am Beispiel eines Bildes von einem Bad. Wird zu diesem Bild das Thema Räumlichkeit als sekundäre Eingangsgröße eingegeben, so wird als Ausgabe Bad ausgegeben. Bei gleichem Bild, jedoch mit sekundärer Eingabe Tätigkeit, soll YoNetCn Adjektive wie duschen, auf Toilette gehen, oder Zähne putzen ausgeben. Theoretisch sind jegliche sekundären Eingangsgrößen möglich, jedoch wurde sich in dieser Arbeit auf die Themen Räumlichkeit und Tätigkeit beschränkt, da der zeitliche Rahmen dieser Arbeit ansonsten gesprengt werden würde und diese beiden Themengebiete als Nachweis für die grundsätzliche Durchführbarkeit der Aufgabenstellung ausreichen. 
 
 
 Auf Grundlage des konkreten Anwendungsbereiches von YoNetCn, der Servicerobotik, wurde als Stellgröße die Verarbeitungszeit und die Genauigkeit definiert. Ein Serviceroboter soll in Echtzeit erkennen können, welche Objekte sich in dem  Raum befinden, in welchem Raum er sich befindet und welche Handlungen mit den erkannten Objekten durchführbar sind. Da Echtzeit je nach Anwendungsbereich unterschiedlich ausgelegt wird, müssten für diesen Anwendungsfall genauere Untersuchungen für eine angemessene Reaktionszeit des Roboters durchgeführt werden, was jedoch nicht Umfang dieser Arbeit ist. Für YoNetCn wurde ein Wert von kleiner 10 Sekunden für die Reaktionszeit definiert, der Einfluss der Auslegung von YoNetCn auf die Reaktionszeit wird im Verlauf der Arbeit genauer beschrieben. 
@@ -53,7 +53,7 @@ Als Beispiel hat ein großes Neuronales Netz, welches sehr viele Objekte erkennt
 Semantische Netzwerke basieren auf Sprache. Da Sprache mehrdeutig sein kann und unter Umständen zu Missverständnissen führt, allgemein nicht immer klar definiert ist im Vergleich zur Informatik und Mathematik, wird auch das Zusammenspiel zwischen dem Neuronalen Netz und dem Semantischen Netz untersucht und entsprechende Störgrößen herausgearbeitet. 
 
 
-Da YoNetCn speziell für die Servicerobotik entwickelt wurde, besteht der Anspruch einer Einbindung in ein verteiltes System. Darunter ist zu verstehen, dass mehrere Roboter auf die Funktion von YoNetCn zugreifen können, ebenso die Ergebnisse zentral zugänglich sind. Die Vision, welche hinter diesem Anspruch steht, ist, dass in einer Umgebung, zum Beispiel ein Altenheim, mehrere Roboter mit unterschiedlichen Fähigkeiten eingesetzt werden können. Einer dieser Roboter hat eine Kamera und kann Bilder empfangen und diese an YoNetCn weiterleiten. Aus den Bildern werden Aufgaben abgeleitet, wie z.B. einen Kaffee kochen, oder das Geschirr aus dem Büro holen und dieses in der Küche in die Spülmaschine einräumen. Der Roboter mit der Kamera hat jedoch keinen Greifarm, ein andere wiederum schon. Die Aufgaben werden Zentral gesteuert und an die Expertenroboter, die entsprechende Aufgaben bewältigen können, weitergeleitet. So entsteht eine Kollaboration zwischen den Robotern. 
+Da YoNetCn speziell für die Servicerobotik entwickelt wurde, besteht der Anspruch einer Einbindung in ein verteiltes System. Darunter ist zu verstehen, dass mehrere Roboter auf die Funktion von YoNetCn zugreifen können, ebenso die Ergebnisse zentral zugänglich sind. Die Vision, welche hinter diesem Anspruch steht, ist, dass in einer Umgebung, zum Beispiel ein Altenheim, mehrere Roboter mit unterschiedlichen Fähigkeiten eingesetzt werden können. Einer dieser Roboter hat eine Kamera und kann Bilder empfangen und diese an YoNetCn weiterleiten. Aus den Bildern werden Aufgaben abgeleitet, wie z.B. einen Kaffee kochen, oder das Geschirr aus dem Büro holen und dieses in der Küche in die Spülmaschine einräumen. Der Roboter mit der Kamera hat jedoch keinen Greifarm, ein andere wiederum schon. Die Aufgaben werden zentral gesteuert und an die Expertenroboter, welche entsprechende Aufgaben bewältigen können, weitergeleitet. So entsteht eine Kollaboration zwischen den Robotern. 
 
 Auch zwischen den Robotern und den Menschen in der Umgebung, soll ein Austausch stattfinden. So erkennt ein Roboter Beispielsweise eine schmutzige, leere Kaffeetasse im Büro. Diese Information mit dem Wissen, dass in der Küche eine Kaffeemaschine steht, ermöglicht es, die Aufgabe des Kaffeekochens anzubieten. Über eine App auf dem Smartphone werden die entsprechenden Service angezeigt und können vom Menschen ausgewählt oder priorisiert werden. 
 
@@ -75,7 +75,7 @@ Ergänzend zur definierten Aufgabe dieser Arbeit wird daher eine Schnittstelle z
 \end{figure}
 
 
-Abbildung X.x zeigt die erweiterte Aufgabenstellung, welche eine Schnittstelle zwischen der Umgebung Roboter und der Umgebung Mensch beinhaltet. 
+Abbildung \ref{Roboter_Mensch_System} zeigt die erweiterte Aufgabenstellung, welche eine Schnittstelle zwischen der Umgebung Roboter und der Umgebung Mensch beinhaltet. 
 Über die Rückmeldung durch den Menschen, könnte noch eine Lernfunktion für die Roboterumgebung integriert werden, sodass beispielsweise Aufgaben die öfters ausgewählt wurden, von YoNetCn bevorzugt angeboten werden. Auch wäre es denkbar dem Menschen nicht nur eine Auswahl von Aufgaben anzubieten, sondern, dass dieser neue Aufgaben definiert oder sogar den Robotern Aufgaben beibringt. 
 Die Umsetzung der angebotenen Aufgaben ist nicht Teil dieser Arbeit, es werden lediglich potenzielle Aufgaben von YoNetCn ausgegeben und der Umgebung Mensch mitgeteilt. 
 
@@ -83,8 +83,8 @@ Die Umsetzung der angebotenen Aufgaben ist nicht Teil dieser Arbeit, es werden l
 
 
 
-\section{Umsetzung}
-\label{sec:umsetzung}
+\section{Voraussetzung}
+\label{sec:voraussetzung}
 
 
 
@@ -96,13 +96,69 @@ Die Umsetzung der angebotenen Aufgaben ist nicht Teil dieser Arbeit, es werden l
 		
 		\includegraphics[width=16cm]{images/Masteridee_4.png}
 		
-		\caption{Roboter Mensch System}
+		\caption{Roboter Mensch System - erweitert}
 		
-		\label{Roboter_Mensch_System}
+		\label{Roboter_Mensch_System2}
 		
 	\end{center}
 	
 	
 \end{figure}
+
+
+
+
+Hardware 
+
+
+Für die Bearbeitung der Masterarbeit und alle damit verbundenen Berechnungen wird ein Mini Turm Computer von FUJITSU, Model CELSIUS W530 verwendet. Verbaut ist ein Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz Prozessor mit 16 GB Arbeitsspeicher, die Grafikkarte GM107GL Quadro K2200 von Nvidia und eine Western Digital WD5000AAKX Blue 500GB interne Festplatte. 
+
+Turtlebot 2
+Der Turtlebot 2 ist ein mobiler Roboter, welcher für die Lehre und Forschung entwickelt wurde. Die Basis des Turtlebots ist die Plattform Kobuki. Sie besteht aus Elektromotoren, die die beiden Antriebsräder antreiben, entsprechende Sensoren für die Steuerung der Räder ( Gyroskop für die Lagebestimmung, Stoßstangen/Taster für die Kollisionsdetektion und weitere Sensoren für die Navigation )  und bietet die Möglichkeit, um externe Sensoren anzuschließen. Ebenso stellt die Plattform Netzanschlüsse ( 5V/1A, 12V/1.5A und 12V/5A ) über USB oder RX/TX für weitere Aktuatoren bereit. Als Energiequelle dient ein Lithium-Ion Akku mit 14,8V, in zwei Größen mit 2200mAh und 4400mAh erhältlich. Die maximale Geschwindigkeit wird mit 70 cm/s und die maximale Rotationsgeschwindigkeit mit 180°/s vom Hersteller angegeben. Zur Kobuki Plattform gehört auch eine Dockingstation, die zum kontaktlosen laden des Turtlebots dient.
+Auf die Kobuki Plattform können flexibel je nach Anwendung mehrere Turtlebot Modulplatten aufgebaut werden, welche Platz für die Sensoren und einen Laptop zur Steuerung bieten. Als Standardsensor für die visuelle Detektion wird die Kamera Asus Xtion Pro Live verwendet. Diese Kamera beinhaltet zwei Audiosensoren, zwei RGB Sensoren ( Auflösung 1280x1024 Pixel, 30 fps ) für 3D Aufnahmen und ein Tiefenbildsensor ( Auflösung 640x480 Pixel bei 30 fps, 320x240 Pixel bei 60 fps ). Empfohlen wird ein Arbeitsabstand von 0,8m bis 3,5m.
+Im Standardaufbau hat der Turtelbot etwa die Abmaße 352mm Durchmesser und eine Höhe von etwa 550mm, wobei die Höhe je nach Aufbau variiert.
+Für die Aufgabe der Objekterkennung wurde für die Kamera eine neue Vorrichtung auf dem Turtlebot installiert, sodass diese ca. 120cm über dem Boden in einem Winkel von -15° in den Raum blickt. Hierdurch wird ein menschenähnlicheres Sichtbild ermöglicht und dadurch ein besserer Überblick über den Raum gewährleistet. 
+
+
+
+
+Software
+
+Basieren auf den Vorgaben der Aufgabenbeschreibung, sind ROS und C++ als Software und Programmiersprache vorgegeben. Auf dem Rechner ist Ubuntu 18.04 als Betriebssystem installiert. Zunächst ist die aktuelle Version von ROS, ROS Melodic Morenia zu installieren. Dafür kann der Anleitung auf der wiki.ros.org Webseite gefolgt werden. 
+ROS Melodic Morenia enthält das Paket OpenNi2launch, welches Bilder von eine über USB verbundenen Kamera als Ros Topic veröffentlicht. Auch unterstützt wird die in dieser Arbeit verwendete Asus Kamera. Über den Befehl roslaunch openni2launch openni2.launch wird der Video Stream gestartet.
+Für die Objekterkennung wurde das Neuronale Netz YOLOv3 verwendet, da dieses dem aktuellen Technologiestand entspricht und Objekterkennung in Echtzeit mit geringer Hardwareanforderung ermöglicht. Das ROS Paket darknetros ermöglicht es, YOLOv3 über ROS zu verwenden. Benötigt für darknetros wird die Software OpenCV und die Bibliothek Boost. OpenCV benötigt wiederum einige weitere Bibliotheken. Eine ausführliche Anleitung zur Installation von OpenCV auf dem Betriebssystem Ubuntu 18.04 und allen Voraussetzungen ist in ... zu finden.
+
+https://www.pyimagesearch.com/2018/05/28/ubuntu-18-04-how-to-install-opencv/
+
+YOLOv3 kann über die CPU oder GPU benutzt werden, letzteres ist um ein vielfaches schneller. Um YOLOv3 über die GPU zu benutzen ist auch die Installation von CUDA, welches nur in Kombination mit einigen NVIDIA Grafikkarten möglich ist, notwendig. CUDA ist eine von NVIDIA entwickelte Technik, um Berechnungen über die Grafikkarte zu ermöglichen. 
+
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.htmlpre-installation-actions
+
+Die von YOLOv3 erkannten Objekte werden einerseits an die Roboterumgebung über einen ros publisher gesendet, ebenso wie an die API von CN5. Für die Kommunikation, also das Senden der Objekte und des Themas und das Empfangen der Gewichtungen von CN5 wurde ein Rest Client, restclient-cpp, verwendet. 
+
+
+""
+Die Objekte werden der Roboterumgeben zur Verfügung gestellt, damit diese Informationen auch anderen Robotern zur Verfügung stehen. Auch können somit die Aufgaben zwischen verschiedenen Robotern/Systemen aufgeteilt werden, sodass ein Roboter für die Erkennung von Objekten, einer für das Ausführen von Aufgaben und ein weiteres System für die Verarbeitung, also die Kommunikation mit CN5 zuständig ist. Aus dem gleichen Grund werden auch die Kamerabilder über einen Ros Node versendet und von YOLOv3 bzw. darknetros Ros Node empfangen. Dadurch können jegliche Aufgaben auf verschiedene Roboter bzw. Computer aufgeteilt und somit ein verteiltes System erzeugt werden. In dieser Arbeit wurden jedoch alle Aufgaben von einem einzigen Computer erledigt, da eine Aufteilung der Aufgaben nicht notwendig ist, weil der in Hardware beschriebene Mini Turm Computer ausreichend Kapazität für die Ausführung aller Aufgaben in der simulierten Umgebung besitzt. Die simulierte Umgebung beschreibt, dass in der Arbeit zwar mit Robotern, dem Turtle Bot, gearbeitet wurde, jedoch dieser nicht über den ROS Node gesteuert wurde. Dieser hat lediglich als Model gedient. Die Kamera wurde stets über den Mini Turm Computer betrieben, auch wenn diese am Turtle Bot angebracht war. Somit konnten Bilder aus der möglichst realen Roboterumgebung entnommen werden. Das Thema des verteilten Systems wird im Kapitel x.x Future Work genauer beschrieben. 
+""
+
+Für die strukturierte Verarbeitung der von CN5 API empfangenen Daten, wurde die Bibliothek JsonCpp verwendet. Entsprechend werden von der CN5 API die Daten im Json Format angefordert. 
+
+Über den Rest Client werden weitere Informationen wie die erkannte Räumlichkeit und die potenziellen Aufgaben an eine selbst entwickelte Java API weitergeleitet. Für die Entwicklung der API wurde die Spezifikation Java for RESTful Web Services, kurz JAX-RS und ein entsprechender Framework Jersey verwendet. 
+Für die Entwicklung der Java API wurde das Programm Eclipse und die Programmiersprache Java und für die Entwicklung von YoNetCn wurde Clion, wie bereits erwähnt mit der Programmiersprache C++, verwendet. 
+
+
+\section{Umsetzung}
+\label{sec:umsetzung}
+
+In diesem Kapitel wird auf die Umsetzung der drei Systemblöcke von YoNetCn eingegangen. 
+
+Objekterkennung
+
+Grundsätzlich ist jedes Modell zur Objekterkennung in YoNetCn integrierbar. 
+
+
+
+
+
 
 
