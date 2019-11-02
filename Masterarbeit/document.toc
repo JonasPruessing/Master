@@ -25,9 +25,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Konzept}{13}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Voraussetzung}{16}{section.5.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Umsetzung}{19}{section.5.3}
+\contentsline {section}{\numberline {5.2}Umsetzung}{14}{section.5.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Evaluation}{21}{chapter.6}
 \defcounter {refsection}{0}\relax 
